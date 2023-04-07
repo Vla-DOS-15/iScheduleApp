@@ -35,13 +35,14 @@
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.btnReadSchedule = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 22);
+            this.label1.Location = new System.Drawing.Point(369, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             // tbNameStudent
             // 
-            this.tbNameStudent.Location = new System.Drawing.Point(114, 19);
+            this.tbNameStudent.Location = new System.Drawing.Point(452, 9);
             this.tbNameStudent.Name = "tbNameStudent";
             this.tbNameStudent.Size = new System.Drawing.Size(163, 20);
             this.tbNameStudent.TabIndex = 1;
@@ -57,17 +58,17 @@
             // comboBoxFaculty
             // 
             this.comboBoxFaculty.FormattingEnabled = true;
-            this.comboBoxFaculty.Location = new System.Drawing.Point(89, 65);
+            this.comboBoxFaculty.Location = new System.Drawing.Point(103, 62);
             this.comboBoxFaculty.Name = "comboBoxFaculty";
-            this.comboBoxFaculty.Size = new System.Drawing.Size(589, 21);
+            this.comboBoxFaculty.Size = new System.Drawing.Size(804, 21);
             this.comboBoxFaculty.TabIndex = 2;
             // 
             // comboBoxGroup
             // 
             this.comboBoxGroup.FormattingEnabled = true;
-            this.comboBoxGroup.Location = new System.Drawing.Point(253, 111);
+            this.comboBoxGroup.Location = new System.Drawing.Point(542, 119);
             this.comboBoxGroup.Name = "comboBoxGroup";
-            this.comboBoxGroup.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxGroup.Size = new System.Drawing.Size(143, 21);
             this.comboBoxGroup.TabIndex = 3;
             // 
             // comboBoxCourse
@@ -78,14 +79,14 @@
             "2",
             "3",
             "4"});
-            this.comboBoxCourse.Location = new System.Drawing.Point(89, 111);
+            this.comboBoxCourse.Location = new System.Drawing.Point(372, 119);
             this.comboBoxCourse.Name = "comboBoxCourse";
-            this.comboBoxCourse.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCourse.Size = new System.Drawing.Size(143, 21);
             this.comboBoxCourse.TabIndex = 4;
             // 
             // btnReadSchedule
             // 
-            this.btnReadSchedule.Location = new System.Drawing.Point(508, 102);
+            this.btnReadSchedule.Location = new System.Drawing.Point(737, 110);
             this.btnReadSchedule.Name = "btnReadSchedule";
             this.btnReadSchedule.Size = new System.Drawing.Size(170, 37);
             this.btnReadSchedule.TabIndex = 5;
@@ -95,17 +96,26 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 192);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 246);
+            this.dataGridView1.Size = new System.Drawing.Size(1001, 246);
             this.dataGridView1.TabIndex = 6;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(103, 120);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1008, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnReadSchedule);
             this.Controls.Add(this.comboBoxCourse);
@@ -130,5 +140,6 @@
         private System.Windows.Forms.ComboBox comboBoxCourse;
         private System.Windows.Forms.Button btnReadSchedule;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

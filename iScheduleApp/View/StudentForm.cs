@@ -30,7 +30,7 @@ namespace iScheduleApp.View
             tbNameStudent.Text = studentName.UserName;
             GetGroup(comboBoxFaculty, "Faculty", "Id");
             GetGroup(comboBoxGroup, "GroupName", "Id");
-
+            dataGridView1.Dock = DockStyle.Fill;
         }
         private ApplicationContext db;
 
@@ -38,16 +38,36 @@ namespace iScheduleApp.View
         {
             try
             {
-                GetGroup(comboBoxGroup, "GroupName", "Id");
+                //GetGroup(comboBoxGroup, "GroupName", "Id");
 
-                GetGroup(comboBoxFaculty, "Faculty", "Id");
+                //GetGroup(comboBoxFaculty, "Faculty", "Id");
                 using (db = new ApplicationContext())
                 {
                     db.Roles.Load();
                     db.Users.Load();
                     db.Schedules.Load();
-                    dataGridView1.DataSource = db.Schedules.ToList();
-                    dataGridView1.DataMember = "Schedules";
+                    db.Groups.Load();
+                    //dataGridView1.DataSource = db.Schedules.ToList();
+                    //dataGridView1.DataMember = "Schedules";
+                    var result = from g in db.Schedules where g.Group.GroupName == comboBoxGroup.Text && g.Date == DateTime.Parse(dateTimePicker1.Text) && g.Group.Faculty == comboBoxFaculty.Text
+
+                                 select new
+                                 {
+                                     StartTime = g.PairNumber.StartTime,
+                                     EndTime = g.PairNumber.EndTime,
+                                     Date = g.Date,
+                                     LessonName = g.LessonName,
+                                     LessonType = g.LessonType.LessonTypeName,
+                                     GroupName = g.Group.GroupName,
+                                     Teacher = g.Teacher.FullName,
+                                     BuildingNumber = g.Auditory.BuildingNumber,
+                                     Floor = g.Auditory.Floor,
+                                     AuditoriumNumber = g.Auditory.AuditoriumNumber,
+                                 };
+                    
+
+                    dataGridView1.DataSource = result.ToList();
+
                     //dataGrid.ItemsSource = db.Accountings.Local.ToBindingList();
                 }
             }
