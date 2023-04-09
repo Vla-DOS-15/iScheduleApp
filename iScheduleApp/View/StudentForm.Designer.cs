@@ -35,7 +35,7 @@
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.btnReadSchedule = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxDay = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             "2",
             "3",
             "4"});
-            this.comboBoxCourse.Location = new System.Drawing.Point(372, 119);
+            this.comboBoxCourse.Location = new System.Drawing.Point(331, 119);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(143, 21);
             this.comboBoxCourse.TabIndex = 4;
@@ -103,19 +103,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(1001, 246);
             this.dataGridView1.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // comboBoxDay
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(103, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.comboBoxDay.FormattingEnabled = true;
+            this.comboBoxDay.Items.AddRange(new object[] {
+            "Понеділок",
+            "Вівторок",
+            "Середа",
+            "Четвер",
+            "П\'ятниця"});
+            this.comboBoxDay.Location = new System.Drawing.Point(103, 119);
+            this.comboBoxDay.Name = "comboBoxDay";
+            this.comboBoxDay.Size = new System.Drawing.Size(143, 21);
+            this.comboBoxDay.TabIndex = 8;
             // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.comboBoxDay);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnReadSchedule);
             this.Controls.Add(this.comboBoxCourse);
@@ -125,6 +132,7 @@
             this.Controls.Add(this.label1);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
+            this.Load += new System.EventHandler(this.StudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,6 +148,6 @@
         private System.Windows.Forms.ComboBox comboBoxCourse;
         private System.Windows.Forms.Button btnReadSchedule;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBoxDay;
     }
 }

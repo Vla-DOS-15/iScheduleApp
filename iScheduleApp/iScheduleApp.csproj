@@ -160,12 +160,14 @@
   <ItemGroup>
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="Models\Auditory.cs" />
+    <Compile Include="Models\Faculty.cs" />
     <Compile Include="Models\Group.cs" />
-    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\LessonType.cs" />
     <Compile Include="Models\PairNumber.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\Teacher.cs" />
-    <Compile Include="TableDataGateway\ScheduleGateway.cs" />
+    <Compile Include="TableDataGateway\StudentGateway.cs" />
+    <Compile Include="TableDataGateway\TeacherGateway.cs" />
     <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +214,9 @@
     </Compile>
     <EmbeddedResource Include="View\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

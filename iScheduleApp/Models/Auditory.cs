@@ -11,7 +11,6 @@ namespace iScheduleApp.Models
     {
         [Key]
         public int AuditoryId { get; set; }
-        public string LessonTypeName { get; set; }
         public int BuildingNumber { get; set; }
         public int Floor { get; set; }
         public int AuditoriumNumber { get; set; }

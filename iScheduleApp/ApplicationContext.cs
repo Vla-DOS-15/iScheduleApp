@@ -17,6 +17,7 @@ namespace iScheduleApp
 
         public DbSet<LessonType> LessonTypes { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Faculty> Faculties { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Auditory> Auditories { get; set; }
         public DbSet<PairNumber> PairNumbers { get; set; }

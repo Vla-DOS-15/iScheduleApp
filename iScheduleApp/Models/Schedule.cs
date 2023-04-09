@@ -12,7 +12,7 @@ namespace iScheduleApp.Models
     {
         [Key]
         public int ScheduleId { get; set; }
-        public DateTime Date { get; set; }
+        public string Day { get; set; }
         public string LessonName { get; set; }
         public int IdPairNumber { get; set; }
         [ForeignKey("IdPairNumber")]
