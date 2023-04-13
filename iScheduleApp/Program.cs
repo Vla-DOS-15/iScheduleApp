@@ -18,7 +18,7 @@ namespace iScheduleApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new LoginForm());
-            Application.Run(new TeacherForm());
+            Application.Run(new AdminForm());
         }
     }
 }

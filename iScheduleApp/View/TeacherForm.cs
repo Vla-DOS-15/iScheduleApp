@@ -62,7 +62,7 @@ namespace iScheduleApp.View
         {
             try
             {
-                teacherGateway.Add(dateTimePicker1.Text, tbLessonName.Text, comboBoxPairNumber.Text, comboBoxGroupName.Text, comboBoxLessonType.Text, tbNameTeacher.Text, int.Parse(comboBoxAuditoriumNumber.Text));
+                teacherGateway.Add(comboBoxDay.Text, tbLessonName.Text, comboBoxPairNumber.Text, comboBoxGroupName.Text, comboBoxLessonType.Text, tbNameTeacher.Text, int.Parse(comboBoxAuditoriumNumber.Text));
                 teacherGateway.GetTable(dataGridView1);
             }
             catch(Exception ex)
