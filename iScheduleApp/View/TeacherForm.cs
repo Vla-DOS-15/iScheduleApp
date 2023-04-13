@@ -1,4 +1,5 @@
-﻿using iScheduleApp.TableDataGateway;
+﻿using iScheduleApp.Models;
+using iScheduleApp.TableDataGateway;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,13 @@ namespace iScheduleApp.View
         {
             InitializeComponent();
         }
+        StudentGateway scheduleGateway;
 
+        public TeacherForm(User name)
+        {
+            InitializeComponent();
+            tbNameTeacher.Text = name.UserName;
+        }
         private void TeacherForm_Load(object sender, EventArgs e)
         {
             teacherGateway = new TeacherGateway();

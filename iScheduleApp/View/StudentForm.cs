@@ -21,6 +21,7 @@ namespace iScheduleApp.View
         {
             InitializeComponent();
         }
+
         public StudentForm(User studentName)
         {
             InitializeComponent();
